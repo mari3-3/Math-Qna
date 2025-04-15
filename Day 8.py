@@ -38,14 +38,14 @@ def printing_qna(qna, index):
 
 def shuffle(all_answers):
   random.shuffle(all_answers)
-  
+
 def display_question(question, all_answers):
   print(question)
   counter = 1
   for answer in all_answers:
     print(f"{counter}. {answer}")
     counter += 1
-  
+
 def get_user_answer():
   player_answer = int(input("Enter the number of the correct answer: ")) 
   return player_answer
@@ -61,7 +61,7 @@ def check_answer(all_answers, correct_answer, player_answer,):
 def start():
   qna = get_qna()
   index = get_question(qna)
-  user_name()
+  name = user_name()
   print()
   while True:
     index = get_question(qna)
@@ -69,7 +69,7 @@ def start():
     shuffle(all_answers)
     display_question(question, all_answers)
     player_answer = get_user_answer()
-    
+
     global counter
     counter = +1
 
@@ -82,11 +82,11 @@ def start():
         start()
     elif counter == 3:
       answer = input("Would you like to play again? (y/n): ").lower().strip()
-  
+
     clear()
     print()
     clear()
-    print("Thanks for playing >+<!")
+    print(f"Thanks for playing {name} >+<!")
     break
 
 start()
