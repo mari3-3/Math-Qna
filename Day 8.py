@@ -11,11 +11,17 @@ def user_name():
 
 def get_qna():
   quizzer = [ 
-    {"question": "Who created Spherical Geometry?", "correct_answer":"Bernhard Riemann", "wrongs":["Jules Ropa","Albert Einstein","John Locke"]},
+    {"question": "Who created Spherical Geometry?",
+     "correct_answer":"Bernhard Riemann",
+     "wrongs":["Jules Ropa","Albert Einstein","John Locke"]},
 
-    {"question": "Who is credited with the invention of Knot Theory?","correct_answer": "Sir William Thomson", "wrongs":[ "Isaac Newton", "Muhammad ibn Musa al-Khwarizmi","Euclid", ]},
+    {"question": "Who is credited with the invention of Knot Theory?"
+    ,"correct_answer": "Sir William Thomson", 
+    "wrongs":[ "Isaac Newton","Muhammad ibn Musa al-Khwarizmi", "Euclid", ]},
 
-    {"question": "Who created Non-Euclidian Geometry?", "correct_answer": "Janos Bolyai", "wrongs":[ "Leonardo Fibonacci", "George Boole", "Benjamin Franklin"]}
+    {"question": "Who created Non-Euclidian Geometry?", 
+     "correct_answer": "Janos Bolyai",
+     "wrongs":[ "Leonardo Fibonacci", "George Boole", "Benjamin Franklin"]}
 ]
   return quizzer
 
@@ -70,7 +76,7 @@ def start():
     check_answer(all_answers, correct_answer, player_answer)
     print()
     if counter == 1: 
-      answer = input("Would you like to continue? (y/n): ").lower().strip()
+      answer = input("Would you like to play again? (y/n): ").lower().strip()
       if answer == 'y':
         clear()
         start()
@@ -80,7 +86,7 @@ def start():
     clear()
     print()
     clear()
-    print("Thanks for playing")
+    print("Thanks for playing >+<!")
     break
 
 start()
